@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/CandyCoding/CDMX012-notes/static/css/main.073c9b0a.css",
-    "main.js": "/CandyCoding/CDMX012-notes/static/js/main.20264320.js",
-    "static/js/787.02181edc.chunk.js": "/CandyCoding/CDMX012-notes/static/js/787.02181edc.chunk.js",
-    "index.html": "/CandyCoding/CDMX012-notes/index.html",
-    "main.073c9b0a.css.map": "/CandyCoding/CDMX012-notes/static/css/main.073c9b0a.css.map",
-    "main.20264320.js.map": "/CandyCoding/CDMX012-notes/static/js/main.20264320.js.map",
-    "787.02181edc.chunk.js.map": "/CandyCoding/CDMX012-notes/static/js/787.02181edc.chunk.js.map"
+    "main.css": "/CDMX012-notes/static/css/main.073c9b0a.css",
+    "main.js": "/CDMX012-notes/static/js/main.9d84918a.js",
+    "static/js/787.02181edc.chunk.js": "/CDMX012-notes/static/js/787.02181edc.chunk.js",
+    "index.html": "/CDMX012-notes/index.html",
+    "main.073c9b0a.css.map": "/CDMX012-notes/static/css/main.073c9b0a.css.map",
+    "main.9d84918a.js.map": "/CDMX012-notes/static/js/main.9d84918a.js.map",
+    "787.02181edc.chunk.js.map": "/CDMX012-notes/static/js/787.02181edc.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.20264320.js"
+    "static/js/main.9d84918a.js"
   ]
 }
