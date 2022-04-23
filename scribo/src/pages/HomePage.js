@@ -1,6 +1,6 @@
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom'
 
-function HomePage() {
+function HomePage () {
   return (
     <div>
       <h1>Home</h1>
@@ -10,8 +10,6 @@ function HomePage() {
       <p>¿No tienes cuenta ?</p>
       <Link to="/registro"> Registrate aquí </Link>
     </div>
-  );
+  )
 }
-export default HomePage;
-
-
+export default HomePage
