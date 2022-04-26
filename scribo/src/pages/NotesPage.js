@@ -1,3 +1,5 @@
+import { ProfileBar } from '../Components/ProfileBar'
+
 function NotesPage () {
   return (
         <div className="notes-page">
@@ -5,6 +7,7 @@ function NotesPage () {
             <p>
                 This is the notes page.
             </p>
+            <ProfileBar/>
         </div>
   )
 }

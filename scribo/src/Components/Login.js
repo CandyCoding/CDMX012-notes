@@ -1,13 +1,12 @@
 import { useState } from 'react'
 import { useAuth } from '../context/authContext'
 import { useNavigate } from 'react-router-dom'
-function RegisterPage () {
+export function Login () {
   const [user, setUser] = useState({
     email: '',
     password: ''
   })
-  const { singup } = useAuth()
-  const navigate = useNavigate()
+
   const [error, setError] = useState()
   const handleChange = ({ target: { name, value } }) => {
     setUser({ ...user, [name]: value })
@@ -15,11 +14,19 @@ function RegisterPage () {
   const handleSubmit = async (e) => {
     e.preventDefault()
     try {
-      await singup(user.email, user.password)
-      navigate('/')
+      await login(user.email, user.password)
+      navigate('/notas')
     } catch (error) {
       setError(error.message)
     }
+  }
+  const { login, loginWithGoogle, loading } = useAuth()
+  const navigate = useNavigate()
+  const handleGoogleSignin = async (e) => {
+    e.preventDefault()
+    if (loading) return <p>Cargando...</p>
+    await loginWithGoogle()
+    navigate('/notas')
   }
   return (
         <div className="register-page">
@@ -37,10 +44,9 @@ function RegisterPage () {
             id="password"
             placeholder="********"
             onChange= {handleChange}/>
-            <button type="submit">Registrarse</button>
-            <button type="button">Registrate con Google </button>
+            <button type="login">Iniciar Sesión</button>
+            <button type="button" onClick = {handleGoogleSignin}>Iniciar con  Google </button>
             </form>
         </div>
   )
 }
-export default RegisterPage
