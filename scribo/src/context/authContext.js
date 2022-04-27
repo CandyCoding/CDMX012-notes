@@ -40,7 +40,7 @@ export function AuthProvider ({ children }) {
   }, [])
   const loginWithGoogle = () => {
     const googleProvider = new GoogleAuthProvider()
-    signInWithPopup(auth, googleProvider)
+    return signInWithPopup(auth, googleProvider)
   }
   return (
         <authContext.Provider value={{ singup, login, user, logout, loginWithGoogle, loading }}>

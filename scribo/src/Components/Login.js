@@ -20,11 +20,10 @@ export function Login () {
       setError(error.message)
     }
   }
-  const { login, loginWithGoogle, loading } = useAuth()
+  const { login, loginWithGoogle } = useAuth()
   const navigate = useNavigate()
   const handleGoogleSignin = async (e) => {
     e.preventDefault()
-    if (loading) return <p>Cargando...</p>
     await loginWithGoogle()
     navigate('/notas')
   }
