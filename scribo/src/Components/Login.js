@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useAuth } from '../context/authContext'
 import { useNavigate } from 'react-router-dom'
+import '../styles/Login.css'
 export function Login () {
   const [user, setUser] = useState({
     email: '',
@@ -28,24 +29,20 @@ export function Login () {
     navigate('/notas')
   }
   return (
-        <div className="register-page">
-            <form onSubmit={handleSubmit} >
-            <label htmlFor="email">Email</label>
+            <form className="login-form" onSubmit={handleSubmit} >
             <input
             type="email"
-            placeholder="correo@correo.com"
+            placeholder="Correo Electrónico"
             name= "email"
             id="email"
             onChange={handleChange}/>
-            <label htmlFor="password">Password</label>
             <input type="password"
             name= "password"
             id="password"
-            placeholder="********"
+            placeholder="Contraseña"
             onChange= {handleChange}/>
-            <button type="login">Iniciar Sesión</button>
-            <button type="button" onClick = {handleGoogleSignin}>Iniciar con  Google </button>
+            <button type="login" id='loginBtn'>Iniciar Sesión</button>
+            <button type="button" id='googleBtn' onClick = {handleGoogleSignin}>Iniciar con G </button>
             </form>
-        </div>
   )
 }

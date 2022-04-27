@@ -5,18 +5,16 @@ import NotesPage from './pages/NotesPage'
 import NotFoundPage from './pages/NotFoundPage'
 import { AuthProvider } from './context/authContext'
 
-import NavBar from './Components/NavBar'
+// import NavBar from './Components/NavBar'
 import './App.css'
-import { Login } from './Components/Login'
 
 function App () {
   return (
     <BrowserRouter className="App">
-      <NavBar />
+     {/*  <NavBar /> */}
       <AuthProvider>
       <Routes>
-      <Route path="/" element={
-      <HomePage/>}/>
+      <Route path="/" element={ <HomePage/>}/>
       <Route path="/registro" element={<RegisterPage/>}/>
       <Route path="/notas" element={<NotesPage/>}/>
       <Route path="*" element={<NotFoundPage/>}/>
