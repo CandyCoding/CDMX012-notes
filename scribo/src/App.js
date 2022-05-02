@@ -3,6 +3,7 @@ import HomePage from './pages/HomePage'
 import RegisterPage from './pages/RegisterPage'
 import NotesPage from './pages/NotesPage'
 import NotFoundPage from './pages/NotFoundPage'
+import WriteNotesPage from './pages/WriteNotesPage'
 import { AuthProvider } from './context/authContext'
 
 // import NavBar from './Components/NavBar'
@@ -17,6 +18,7 @@ function App () {
       <Route path="/" element={ <HomePage/>}/>
       <Route path="/registro" element={<RegisterPage/>}/>
       <Route path="/notas" element={<NotesPage/>}/>
+      <Route path="/crearnota" element={<WriteNotesPage/>}/>
       <Route path="*" element={<NotFoundPage/>}/>
       </Routes>
       </AuthProvider>

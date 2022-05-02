@@ -7,12 +7,15 @@ export function ProfileBar () {
     await logout()
     navigate('/')
   }
-  console.log(user)
+  // console.log(user)
   if (loading) return <p>Cargando...</p>
   return (
-        <div className="profile-bar">
-            <h1>Bienvenido{user.email} </h1>
-            <button type='button' onClick= {handleLogout}> Cerrar Sesión </button>
-            </div>
+        <div className='profile-bar'>
+            <h1>Bienvenido {user.displayName} </h1>
+            <button className='logout-btn' type='button' onClick={handleLogout}>
+                Cerrar Sesión
+            </button>
+            <img className='profile-photo' src={user.photoURL} alt='profile photo' />
+        </div>
   )
 }

@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import { useAuth } from '../context/authContext'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
+import logo from '../assets/logoScribo.png'
+import '../styles/RegisterPage.css'
 function RegisterPage () {
   const [user, setUser] = useState({
     email: '',
@@ -22,25 +24,25 @@ function RegisterPage () {
     }
   }
   return (
-        <div className="register-page">
-            <form onSubmit={handleSubmit} >
-            <label htmlFor="email">Email</label>
+
+    <div>
+       <img src={logo} alt="logo" className="logo-2"/>
+            <form className= "register-page" onSubmit={handleSubmit} >
             <input
             type="email"
-            placeholder="correo@correo.com"
+            placeholder="Correo Electrónico"
             name= "email"
             id="email"
             onChange={handleChange}/>
-            <label htmlFor="password">Password</label>
             <input type="password"
             name= "password"
             id="password"
-            placeholder="********"
+            placeholder="Crea tu contraseña"
             onChange= {handleChange}/>
-            <button type="submit">Registrarse</button>
-            <button type="button">Registrate con Google </button>
+            <button type="submit" className='bnt-registro'>Registrarse</button>
+            <button type="button"className='btn-volver'> <Link className= "link-registro" to="/">Volver</Link></button>
             </form>
-        </div>
+          </div>
   )
 }
 export default RegisterPage

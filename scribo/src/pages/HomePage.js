@@ -10,7 +10,7 @@ function HomePage () {
   return (
     <div className="home-page">
       <img src={logo} alt="logo" className="logo" />
-      <Login />
+      <Login/>
       <div className="home-page__options">
       <p>¿No tienes cuenta? </p>
       <Link className= "link-registro" to="/registro">¡Registrate aquí !</Link>
