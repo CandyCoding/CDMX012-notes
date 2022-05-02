@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/CDMX012-notes/static/css/main.a87f6c3f.css",
-    "main.js": "/CDMX012-notes/static/js/main.d2b83655.js",
+    "main.js": "/CDMX012-notes/static/js/main.ea1fb910.js",
     "static/js/787.02181edc.chunk.js": "/CDMX012-notes/static/js/787.02181edc.chunk.js",
     "static/media/logoScribo.png": "/CDMX012-notes/static/media/logoScribo.ca963e4d592c483510ef.png",
     "index.html": "/CDMX012-notes/index.html",
     "main.a87f6c3f.css.map": "/CDMX012-notes/static/css/main.a87f6c3f.css.map",
-    "main.d2b83655.js.map": "/CDMX012-notes/static/js/main.d2b83655.js.map",
+    "main.ea1fb910.js.map": "/CDMX012-notes/static/js/main.ea1fb910.js.map",
     "787.02181edc.chunk.js.map": "/CDMX012-notes/static/js/787.02181edc.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a87f6c3f.css",
-    "static/js/main.d2b83655.js"
+    "static/js/main.ea1fb910.js"
   ]
 }
