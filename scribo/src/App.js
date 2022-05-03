@@ -15,7 +15,7 @@ function App () {
      {/*  <NavBar /> */}
       <AuthProvider>
       <Routes>
-      <Route path="/" element={ <HomePage/>}/>
+      <Route path="/CDMX012-notes" element={ <HomePage/>}/>
       <Route path="/registro" element={<RegisterPage/>}/>
       <Route path="/notas" element={<NotesPage/>}/>
       <Route path="/crearnota" element={<WriteNotesPage/>}/>

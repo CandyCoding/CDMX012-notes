@@ -5,7 +5,7 @@ export function ProfileBar () {
   const navigate = useNavigate()
   const handleLogout = async () => {
     await logout()
-    navigate('/')
+    navigate('/CDMX012-notes')
   }
   // console.log(user)
   if (loading) return <p>Cargando...</p>

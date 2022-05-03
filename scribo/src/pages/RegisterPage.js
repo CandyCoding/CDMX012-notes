@@ -18,7 +18,7 @@ function RegisterPage () {
     e.preventDefault()
     try {
       await singup(user.email, user.password)
-      navigate('/')
+      navigate('/CDMX012-notes')
     } catch (error) {
       setError(error.message)
     }
@@ -40,7 +40,7 @@ function RegisterPage () {
             placeholder="Crea tu contraseña"
             onChange= {handleChange}/>
             <button type="submit" className='bnt-registro'>Registrarse</button>
-            <button type="button"className='btn-volver'> <Link className= "link-registro" to="/">Volver</Link></button>
+            <button type="button"className='btn-volver'> <Link className= "link-registro" to="/CDMX012-notes">Volver</Link></button>
             </form>
           </div>
   )
