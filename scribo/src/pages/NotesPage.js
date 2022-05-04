@@ -6,6 +6,7 @@ import { collection, onSnapshot, deleteDoc, doc } from 'firebase/firestore'
 import '../styles/NotesPage.css'
 function NotesPage () {
   const [notes, setNotes] = useState([])
+  const [currentId, setCurrentId] = useState('')
 
   const getNotes = async () => {
     onSnapshot(collection(db, 'users', auth.currentUser.uid, 'notes'), (querySnapshot) => {
@@ -20,22 +21,25 @@ function NotesPage () {
   useEffect(() => {
     getNotes()
   }, [])
-  const deleteNote = (id) => {
+
+  const deleteNote = async (id) => {
     if (window.confirm('¿Estás seguro de eliminar esta nota?')) {
-      deleteDoc(collection(db, 'users', auth.currentUser.uid, 'notes', id))
+      const postDoc = doc(db, 'users', auth.currentUser.uid, 'notes', id)
+      await deleteDoc(postDoc)
     }
   }
   return (
         <div className="notes-page">
             <ProfileBar/>
-            <h2>Sección de notas </h2>
             <div className='notes-container'>
             {notes.map(note => {
               return (
                 <div className='note-container' key={note.id}>
-               <button onClick= {() => deleteNote(note.id)}>Borrar</button>
-                <h2>{note.title}</h2>
-                <p>{note.postText}</p>
+                <button onClick= {() => deleteNote(note.id)}>&#128465;</button>
+                <button className='edit-note' onClick={() => setCurrentId(note.id)}>
+                &#9999;</button>
+                <h4 className='title-note'>{note.title}</h4>
+                <div className='textcontent-container'>{note.postText}</div>
                 </div>
               )
             })}

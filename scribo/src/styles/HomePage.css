@@ -113,38 +113,40 @@ p{
         margin: 0%;
         padding: 0%;
         display: flex;
-        justify-content: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between; 
         align-items: center;
     }
-    
     .logo{
-        top:55%;
-        width:90%;
-        position : relative;
-        justify-self: center;
-        left:8%;
+        position: absolute;
+        bottom: 40%
     }
     .login-form{
-        left: 5%;
         position: relative;
+        top:600px;
         width:90%;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: 5%;
         height:400px;
         display: flex;
         flex-wrap: wrap;
         bottom: 250px;
         justify-content: center;
-        gap: 1px;
     }
     button{
-        width:60%;
-        height:10%;
+        width:30%;
+        height:12%;
         background-color:#715DAB;
         color: white;
-        font-size: 24px;
+        font-size: 30px;
         font-weight: bold;
         border: none;
-        border-radius: 20px;
+        border-radius: 25px;
         cursor: pointer;
+        box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
+        text-decoration: none;
     }
     button:hover{
         background-color: #715DAB;
@@ -155,7 +157,6 @@ p{
        margin-left:90px;
     }
     #googleBtn{
-        position: relative;
         bottom: 20px;
         margin-right: 90px;
         margin-left: 90px;
@@ -163,49 +164,47 @@ p{
     
     #email{
         width:85%;
-        height:5%;
+        height:10%;
         background-color:#9399F5;
         border: none;
         box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
         padding: 10px;
-        font-size: 20px;
+        font-size: 24px;
         font-weight: bold;
         color: white;
     }
     #password{
         width:85%;
-        height:5%;
+        height:10%;
         background-color: #9399F5;
         border: none;
         box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
         padding: 10px;
-        font-size: 20px;
+        font-size: 24px;
         font-weight: bold;
         color: white;
     }
     ::placeholder{
         color:white;
-        font-size: 20px;
+        font-size: 24px;
         font-weight:normal;
     }
     .home-page__options{
         position: relative;
-        left:5%;
+        top:600px;
         width:90%;
         height:100%;
         display: flex;
         flex-wrap: wrap;
-        font-size: 24px;
+        font-size: 30px;
         text-align: justify;
         justify-content: center;
         align-items: center;
         bottom: 280px;
+        left:5%;
     }
     .link-registro{
         color: #9399F5;
-    }
-    .link-registro:hover{
-        background-color: gold;
     }
     p{
         width: 100%;
@@ -218,30 +217,23 @@ p{
         height: 100vh;
         width: 100vw;
         overflow-x: hidden;
-        margin: 0%;
-        padding: 0%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
     }
     
     .logo{
-        top:50px;
-        width:500px;
-        position : relative;
+        position :absolute;
+        bottom: 45%;
         justify-self: center;
         left: 25%;
     }
     .login-form{
-        left: 5%;
+        width: 100%;
         position: relative;
-        width:90%;
-        height:400px;
+        height:300px;
         display: flex;
         flex-wrap: wrap;
-        bottom: 120px;
+        top: 200px;
         justify-content: center;
-        gap: 1px;
+        margin: 0px;
     }
     button{
         width:20%;
@@ -253,10 +245,6 @@ p{
         border: none;
         border-radius: 20px;
         cursor: pointer;
-    }
-    button:hover{
-        background-color: #715DAB;
-        color: white;
     }
     #loginBtn{
        margin-right: 40%;
@@ -298,8 +286,8 @@ p{
     }
     .home-page__options{
         position: relative;
-        left:5%;
-        width:90%;
+        left:15%;
+        width:70%;
         height:100%;
         display: flex;
         flex-wrap: wrap;
@@ -307,7 +295,8 @@ p{
         text-align: justify;
         justify-content: center;
         align-items: center;
-        bottom: 180px;
+        top: 130px;
+        margin: 0px;
     }
     .link-registro{
         color: #9399F5;

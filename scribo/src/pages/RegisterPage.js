@@ -26,8 +26,8 @@ function RegisterPage () {
   return (
 
     <div>
-       <img src={logo} alt="logo" className="logo-2"/>
-            <form className= "register-page" onSubmit={handleSubmit} >
+       <img src={logo} alt="logo" className="logo"/>
+            <form className= "register-form" onSubmit={handleSubmit} >
             <input
             type="email"
             placeholder="Correo Electrónico"
@@ -40,7 +40,7 @@ function RegisterPage () {
             placeholder="Crea tu contraseña"
             onChange= {handleChange}/>
             <button type="submit" className='bnt-registro'>Registrarse</button>
-            <button type="button"className='btn-volver'> <Link className= "link-registro" to="/CDMX012-notes">Volver</Link></button>
+            <button type="button"className='btn-volver'> <Link className= "link-volver" to="/CDMX012-notes">Volver</Link></button>
             </form>
           </div>
   )

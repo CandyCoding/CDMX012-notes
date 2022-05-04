@@ -30,6 +30,7 @@
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
+        justify-content: space-between; 
         align-items: center;
     }
 .profile-bar{
@@ -53,7 +54,6 @@
     margin-bottom: 15px;
     margin-left: 1px;
     margin-right: 1px;
-
 }
 .profile-photo{
     border-radius: 50%;
@@ -84,6 +84,48 @@
     font-size: 50px;
 }
 
+.notes-container{
+    background-color: #715DAB;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    grid-gap: 10px;
+    padding: 10px;
+    grid-auto-flow: column;
+    grid-auto-flow:row;
+    width: 750px;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.note-container{
+    width: 325px;
+    height: 300px;
+    background-color: #DDDFFD;
+    border-radius: 5px;
+    border: 2px solid #B8AED5;
+    box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 10px;
+    margin:5px;
+}
+.note-container button{
+    width: 100px;
+    height: 30px;
+    background-color: #715DAB;
+    color: white;
+    font-size: 20px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
+.textcontent-container{
+    width: 100%;
+    height: auto,max-content(300px);
+    text-align: justify;
+    font-size: 18px;
+}
 }
 /* mediaqueries para tablet vertical termina  */
 @media only screen and (max-width: 1200px ) and (orientation: landscape ){
@@ -97,6 +139,101 @@
         justify-content: center;
         align-items: center;
     }
-
+.profile-bar{
+    display: flex;
+    flex-wrap: nowrap;
+    position: fixed;
+    justify-content: space-around;
+    width: 90%;
+    height: 50px;
+    font-size: 12px;
+    background-color:#DDDFFD;
+    color : black;
+    text-align: justify;
+    font-size: 14px;
+    border-radius: 35px;
+    border: 4px solid #B8AED5;
+    box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 10px;
+    top:10px;
+    left: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 1px;
+    margin-right: 1px;
+    text-align: center;
+}
+.profile-photo{
+    border-radius: 50px;
+    border: 2px solid white;
+    width: 60px;
+    height: 60px;
+}
+.logout-btn{
+    width: 200px;
+    height: 40px;
+    background-color: #715DAB;
+    color: white;
+    font-size: 24px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
+.add-note{
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.link-create{
+    color :white;
+    text-decoration: none;
+    font-size: 50px;
+}
+.notes-container{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    grid-gap: 10px;
+    padding: 10px;
+    grid-auto-flow: column;
+    grid-auto-flow:row;
+    width: 1000px;
+    height: auto;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: #715DAB;
+}
+.note-container{
+    width: 325px;
+    height: 300px;
+    background-color: #DDDFFD;
+    border-radius: 5px;
+    border: 2px solid #B8AED5;
+    box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 10px;
+    margin:5px;
+}
+.note-container button{
+    width: 100px;
+    height: 30px;
+    background-color: #715DAB;
+    color: white;
+    font-size: 20px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
+.textcontent-container{
+    width: 100%;
+    height: auto,max-content(300px);
+    text-align: justify;
+    font-size: 18px;
+}
 }
 /* mediaqueries para tablet horizontal termina  */
