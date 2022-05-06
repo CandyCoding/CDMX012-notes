@@ -35,11 +35,16 @@ function NotesPage () {
             {notes.map(note => {
               return (
                 <div className='note-container' key={note.id}>
-                <button onClick= {() => deleteNote(note.id)}>&#128465;</button>
+                <section className='title-container'>
+                <h4 className='title-note'>{note.title}</h4>
+                </section>
+                <div className='textcontent-container'>{note.postText}</div>
+                <section className='btn-container'>
+                <button onClick= {() => deleteNote(note.id)}>&#128465;
+                </button>
                 <button className='edit-note' onClick={() => setCurrentId(note.id)}>
                 &#9999;</button>
-                <h4 className='title-note'>{note.title}</h4>
-                <div className='textcontent-container'>{note.postText}</div>
+                </section>
                 </div>
               )
             })}

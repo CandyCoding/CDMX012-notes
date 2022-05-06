@@ -5,9 +5,9 @@ import NotesPage from './pages/NotesPage'
 import NotFoundPage from './pages/NotFoundPage'
 import WriteNotesPage from './pages/WriteNotesPage'
 import { AuthProvider } from './context/authContext'
-
 // import NavBar from './Components/NavBar'
 import './App.css'
+import { ProtectedRoute } from './pages/ProtectedRoute'
 
 function App () {
   return (
@@ -15,10 +15,12 @@ function App () {
      {/*  <NavBar /> */}
       <AuthProvider>
       <Routes>
-      <Route path="/CDMX012-notes" element={ <HomePage/>}/>
+      <Route path="/CDMX012-notes" element={
+       <HomePage/> }/>
       <Route path="/registro" element={<RegisterPage/>}/>
-      <Route path="/notas" element={<NotesPage/>}/>
-      <Route path="/crearnota" element={<WriteNotesPage/>}/>
+      <Route path="/notas" element={
+      <ProtectedRoute><NotesPage/></ProtectedRoute>}/>
+      <Route path="/crearnota" element={<ProtectedRoute><WriteNotesPage/></ProtectedRoute>}/>
       <Route path="*" element={<NotFoundPage/>}/>
       </Routes>
       </AuthProvider>
