@@ -135,7 +135,7 @@ p{
         bottom: 250px;
         justify-content: center;
     }
-    button{
+    .login-form button{
         width:30%;
         height:12%;
         background-color:#715DAB;
@@ -153,8 +153,8 @@ p{
         color: white;
     }
     #loginBtn{
-       margin-right: 90px;
-       margin-left:90px;
+    margin-right: 90px;
+    margin-left:90px;
     }
     #googleBtn{
         bottom: 20px;

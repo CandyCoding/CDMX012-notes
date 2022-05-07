@@ -4,6 +4,7 @@ import { db, auth } from '../firebase'
 import { Link } from 'react-router-dom'
 import { collection, onSnapshot, deleteDoc, doc } from 'firebase/firestore'
 import '../styles/NotesPage.css'
+import Swal from 'sweetalert2'
 function NotesPage () {
   const [notes, setNotes] = useState([])
   const [currentId, setCurrentId] = useState('')
@@ -22,11 +23,23 @@ function NotesPage () {
     getNotes()
   }, [])
 
-  const deleteNote = async (id) => {
-    if (window.confirm('¿Estás seguro de eliminar esta nota?')) {
-      const postDoc = doc(db, 'users', auth.currentUser.uid, 'notes', id)
-      await deleteDoc(postDoc)
+  const deleteNote = (id) => {
+    Swal.fire({
+      title: '¿Quieres borrar esta nota?',
+      showCancelButton: true,
+      confirmButtonText: 'Sí',
+      cancelButtonText: 'No',
+      cancelButtonColor: '#7066e0',
+      confirmButtonColor: '#7066e0',
+      width: '500px',
+      background: '#DDDFFD'
+    }).then(async (result) => {
+      if (result.isConfirmed) {
+        const postDoc = doc(db, 'users', auth.currentUser.uid, 'notes', id)
+        await deleteDoc(postDoc)
+      }
     }
+    )
   }
   return (
         <div className="notes-page">
