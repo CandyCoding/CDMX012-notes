@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { ProfileBar } from '../Components/ProfileBar'
-import { addDoc, collection } from 'firebase/firestore'
+import { addDoc, collection, serverTimestamp } from 'firebase/firestore'
 import { auth, db } from '../firebase'
 import '../styles/WriteNotesPage.css'
 
@@ -13,6 +13,8 @@ function WriteNotesPage () {
     await addDoc(collection(db, 'users', auth.currentUser.uid, 'notes'), {
       title,
       postText,
+      date: serverTimestamp(),
+      dateTime: new Date().toLocaleString(),
       author: auth.currentUser.displayName,
       authorId: auth.currentUser.uid
     })

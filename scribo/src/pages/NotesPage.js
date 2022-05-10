@@ -2,13 +2,15 @@ import { ProfileBar } from '../Components/ProfileBar'
 import { useEffect, useState } from 'react'
 import { db, auth } from '../firebase'
 import { Link } from 'react-router-dom'
-import { collection, onSnapshot, deleteDoc, doc } from 'firebase/firestore'
+import { collection, onSnapshot, deleteDoc, doc, orderBy, query } from 'firebase/firestore'
 import '../styles/NotesPage.css'
 import Swal from 'sweetalert2'
 function NotesPage () {
   const [notes, setNotes] = useState([])
   const getNotes = async () => {
-    onSnapshot(collection(db, 'users', auth.currentUser.uid, 'notes'), (querySnapshot) => {
+    const collectionRef = collection(db, 'users', auth.currentUser.uid, 'notes')
+    const q = query(collectionRef, orderBy('date', 'desc'))
+    onSnapshot(q, (querySnapshot) => {
       const docs = []
       querySnapshot.forEach(doc => {
         docs.push({ ...doc.data(), id: doc.id })
@@ -51,6 +53,7 @@ function NotesPage () {
                 <h4 className='title-note'>{note.title}</h4>
                 </section>
                 <div className='textcontent-container'>{note.postText}</div>
+                <p className='date-note'>Ultima actualización el : {note.dateTime}</p>
                 <section className='btn-container'>
                 <button onClick= {() => deleteNote(note.id)}>&#128465;
                 </button>

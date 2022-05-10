@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import { ProfileBar } from '../Components/ProfileBar'
-import { collection, doc, getDoc, updateDoc } from 'firebase/firestore'
+import { collection, doc, getDoc, updateDoc, serverTimestamp } from 'firebase/firestore'
 import { auth, db } from '../firebase'
 import '../styles/WriteNotesPage.css'
 function EditNotePage () {
@@ -19,7 +19,7 @@ function EditNotePage () {
   }
   const handleInputChange = (event) => {
     const { name, values } = event.target
-    setValues({ ...values, [name]: event.target.value })
+    setValues({ ...values, [name]: event.target.value, date: serverTimestamp(), dateTime: new Date().toLocaleString() })
   }
   useEffect(() => {
     getNote(id)
