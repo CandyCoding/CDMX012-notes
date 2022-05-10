@@ -1,0 +1,45 @@
+import { useState, useEffect } from 'react'
+import { Link, useNavigate, useParams } from 'react-router-dom'
+import { ProfileBar } from '../Components/ProfileBar'
+import { collection, doc, getDoc, updateDoc } from 'firebase/firestore'
+import { auth, db } from '../firebase'
+import '../styles/WriteNotesPage.css'
+function EditNotePage () {
+  const navigate = useNavigate()
+  const { id } = useParams()
+  const initiaStateValues = {
+    title: '',
+    postText: ''
+  }
+  const [values, setValues] = useState(initiaStateValues)
+  const getNote = async (id) => {
+    const postDoc = doc(db, 'users', auth.currentUser.uid, 'notes', id)
+    const docSnap = await getDoc(postDoc)
+    setValues(docSnap.data())
+  }
+  const handleInputChange = (event) => {
+    const { name, values } = event.target
+    setValues({ ...values, [name]: event.target.value })
+  }
+  useEffect(() => {
+    getNote(id)
+  }, [])
+  const editNote = async (id) => {
+    await updateDoc(doc(db, 'users', auth.currentUser.uid, 'notes', id), values)
+    navigate('/notas')
+  }
+  return (
+          <div className="create-post">
+              <ProfileBar/>
+              <div className="create-post__container">
+              <Link className= "back-notas" to="/notas"> X </Link>
+              <input className= 'title-input'type="text" name='title' value={values.title} onChange={handleInputChange}/>
+              <textarea className='content-input' name='postText'value={values.postText}onChange=
+              {handleInputChange}></textarea>
+              <button className='update-note' onClick={() => editNote(id)}>Actualizar</button>
+              </div>
+          </div>
+  )
+}
+
+export default EditNotePage

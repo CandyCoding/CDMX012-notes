@@ -18,6 +18,7 @@ function WriteNotesPage () {
     })
     navigate('/notas')
   }
+
   return (
         <div className="create-post">
             <ProfileBar/>

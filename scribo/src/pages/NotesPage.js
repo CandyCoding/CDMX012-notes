@@ -7,8 +7,6 @@ import '../styles/NotesPage.css'
 import Swal from 'sweetalert2'
 function NotesPage () {
   const [notes, setNotes] = useState([])
-  const [currentId, setCurrentId] = useState('')
-
   const getNotes = async () => {
     onSnapshot(collection(db, 'users', auth.currentUser.uid, 'notes'), (querySnapshot) => {
       const docs = []
@@ -41,6 +39,7 @@ function NotesPage () {
     }
     )
   }
+
   return (
         <div className="notes-page">
             <ProfileBar/>
@@ -55,8 +54,7 @@ function NotesPage () {
                 <section className='btn-container'>
                 <button onClick= {() => deleteNote(note.id)}>&#128465;
                 </button>
-                <button className='edit-note' onClick={() => setCurrentId(note.id)}>
-                &#9999;</button>
+                <button className='edit-note'> <Link to={`/editar/${note.id}`}> &#9999;</Link></button>
                 </section>
                 </div>
               )
