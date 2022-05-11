@@ -44,6 +44,9 @@ function NotesPage () {
     )
   }
   const [menuOpen, setMenuOpen] = useState(false)
+  const handleClickMenu = (id) => {
+    menuOpen === id ? setMenuOpen(!menuOpen) : setMenuOpen(id)
+  }
 
   return (
         <div className="notes-page">
@@ -58,7 +61,7 @@ function NotesPage () {
                 <div className='textcontent-container'>{note.postText}</div>
                 <p className='date-note'>Última actualización el {note.dateTime}</p>
                 <section>
-                <button id='menu-item' onClick={() => setMenuOpen(!menuOpen)}>
+                <button id='menu-item' onClick={() => handleClickMenu(note.id)}>
                   <GoKebabVertical size='1.2em'/>
                 </button>
                 {menuOpen && <ul className='menu'>

@@ -81,6 +81,23 @@
         margin-right: 10px;
         font-size: 24px;
     }
+    .update-note{
+        width: 25%;
+        height: 35px;
+        border-radius: 15px;
+        border: none;
+        background-color: #715DAB;
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+        cursor: pointer;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 24px;
+    }
+
     .back-notas{
         width: 95%;
         text-align: right;

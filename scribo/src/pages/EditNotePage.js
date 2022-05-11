@@ -18,10 +18,10 @@ function EditNotePage () {
     const docSnap = await getDoc(postDoc)
     setValues(docSnap.data())
   }
-  const handleInputChange = (event) => {
-    const { name, values } = event.target
-    setValues({ ...values, [name]: event.target.value, date: serverTimestamp(), dateTime: new Date().toLocaleString() })
-  }
+  // const handleInputChange = (event) => {
+  //   const { name, values } = event.target
+  //   setValues({ ...values, [name]: event.target.value, date: serverTimestamp(), dateTime: new Date().toLocaleString() })
+  // }
   useEffect(() => {
     getNote(id)
   }, [])
@@ -34,9 +34,9 @@ function EditNotePage () {
               <ProfileBar/>
               <div className="create-post__container">
               <Link className= "back-notas" to="/notas"> <GoX/></Link>
-              <input className= 'title-input'type="text" name='title' value={values.title} onChange={handleInputChange}/>
+              <input className= 'title-input'type="text" name='title' value={values.title} onChange={(e) => setValues({ ...values, title: e.target.value })}/>
               <textarea className='content-input' name='postText'value={values.postText}onChange=
-              {handleInputChange}></textarea>
+              {(e) => setValues({ ...values, postText: e.target.value })}></textarea>
               <button className='update-note' onClick={() => editNote(id)}>Actualizar</button>
               </div>
           </div>

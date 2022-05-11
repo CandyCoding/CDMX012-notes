@@ -161,6 +161,37 @@
     font-weight: 600;
 
 }
+#menu-item{
+    background-color: #DDDFFD;
+    color:black;
+    position: relative;
+    left: 140px;
+}
+.menu{
+    position: absolute;
+    top: 380px;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    background-color: #715DAB;
+    text-decoration: none;
+    list-style: none;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+.menu a{
+    list-style: none;
+    color:white;
+    font-size: 20px;
+    font-weight: 400;
+    text-decoration: none;
+}
+.add-note{
+    background-color: #715DAB;
+    border: none;
+    box-shadow: 4px 4px 4px  rgba(0, 0, 0, 0.25);
+}
 
 }
 /* mediaqueries para tablet vertical termina  */
