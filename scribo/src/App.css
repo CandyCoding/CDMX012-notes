@@ -13,13 +13,17 @@
   }
   .swal2-title {
     color: black;
+    font-size: 1.5rem;
+    font-family: 'Montserrat', sans-serif;
    }
    
    .swal2-cancel .swal2-styled{
      color:black;
      text-align: center;
+     font-family: 'Montserrat', sans-serif;
    }
    .swal2-confirm .swal2-styled{
     color:black;
+    font-family: 'Montserrat', sans-serif;
    }
 }

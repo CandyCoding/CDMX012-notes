@@ -1,3 +1,6 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+}
 @media only screen and (max-width: 500px ){
     body{
         height: 100vh;
@@ -144,12 +147,19 @@
     font-size: 20px;
     margin-bottom: 10px;
     margin-top: 2px;
+    font-weight: 600;
 }
 .textcontent-container{
     width: 100%;
-    height: 200px;
+    height: 256px;
     text-align: justify;
     font-size: 20px;
+}
+.date-note{
+    font-size: 14px;
+    color: #6143bd;
+    font-weight: 600;
+
 }
 
 }

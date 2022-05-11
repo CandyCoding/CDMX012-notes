@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { ProfileBar } from '../Components/ProfileBar'
 import { addDoc, collection, serverTimestamp } from 'firebase/firestore'
 import { auth, db } from '../firebase'
+import { GoX } from 'react-icons/go'
 import '../styles/WriteNotesPage.css'
 
 function WriteNotesPage () {
@@ -25,7 +26,7 @@ function WriteNotesPage () {
         <div className="create-post">
             <ProfileBar/>
             <div className="create-post__container">
-            <Link className= "back-notas" to="/notas"> X </Link>
+            <Link className= "back-notas" to="/notas"> <GoX/></Link>
             <input className= 'title-input'type="text"placeholder='Título'onChange={(event) => { setTitle(event.target.value) }}/>
             <textarea className='content-input'placeholder='Nota'onChange=
             {(event) => { setPostText(event.target.value) }}></textarea>

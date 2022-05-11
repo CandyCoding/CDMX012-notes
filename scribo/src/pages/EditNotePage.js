@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import { ProfileBar } from '../Components/ProfileBar'
-import { collection, doc, getDoc, updateDoc, serverTimestamp } from 'firebase/firestore'
+import { doc, getDoc, updateDoc, serverTimestamp } from 'firebase/firestore'
 import { auth, db } from '../firebase'
+import { GoX } from 'react-icons/go'
 import '../styles/WriteNotesPage.css'
 function EditNotePage () {
   const navigate = useNavigate()
@@ -32,7 +33,7 @@ function EditNotePage () {
           <div className="create-post">
               <ProfileBar/>
               <div className="create-post__container">
-              <Link className= "back-notas" to="/notas"> X </Link>
+              <Link className= "back-notas" to="/notas"> <GoX/></Link>
               <input className= 'title-input'type="text" name='title' value={values.title} onChange={handleInputChange}/>
               <textarea className='content-input' name='postText'value={values.postText}onChange=
               {handleInputChange}></textarea>
