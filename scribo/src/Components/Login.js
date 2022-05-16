@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useAuth } from '../context/authContext'
 import { useNavigate } from 'react-router-dom'
+import { FcGoogle } from 'react-icons/fc'
 import '../styles/Login.css'
 export function Login () {
   const [user, setUser] = useState({
@@ -42,7 +43,7 @@ export function Login () {
             placeholder="Contraseña"
             onChange= {handleChange}/>
             <button type="login" id='loginBtn'>Iniciar Sesión</button>
-            <button type="button" id='googleBtn' onClick = {handleGoogleSignin}>Iniciar con G </button>
+            <button type="button" id='googleBtn' onClick = {handleGoogleSignin}>Iniciar con <FcGoogle></FcGoogle> </button>
             </form>
   )
 }

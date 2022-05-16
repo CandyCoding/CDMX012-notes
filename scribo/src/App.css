@@ -26,4 +26,11 @@
     color:black;
     font-family: 'Montserrat', sans-serif;
    }
+   .note-text{
+    color: black;
+    text-decoration: none;
+}
+.option-one{
+  background-color: #DDDFFD;
+}
 }
