@@ -6,6 +6,7 @@ import Swal from 'sweetalert2'
 import { auth, db } from '../firebase'
 import { GoX } from 'react-icons/go'
 import '../styles/WriteNotesPage.css'
+import { MdCenterFocusStrong } from 'react-icons/md'
 function EditNotePage () {
   const navigate = useNavigate()
   const { id } = useParams()

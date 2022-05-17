@@ -119,6 +119,7 @@ p{
         align-items: center;
     }
     .logo{
+        height: 680px;
         position: absolute;
         bottom: 40%
     }
@@ -149,13 +150,30 @@ p{
         text-decoration: none;
     }
     #loginBtn{
+    width: 250px;
     margin-right: 90px;
     margin-left:90px;
+    border-radius: 13px;
     }
     #googleBtn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        gap:24px;
+        background-color: white;
+        color :black;
         bottom: 20px;
         margin-right: 90px;
         margin-left: 90px;
+        border-radius: 5px;
+        border: 1px solid #715DAB;
+        width: auto;
+        color:rgba(5, 5, 5, 0.49);
+        padding-left:  8px;
+        padding-right: 8px;
+        font-weight: 600;
+        font-size: 24px;
     }
     
     #email{
@@ -187,7 +205,7 @@ p{
     }
     .home-page__options{
         position: relative;
-        top:600px;
+        top:550px;
         width:90%;
         height:100%;
         display: flex;
@@ -217,11 +235,11 @@ p{
     }
     
     .logo{
-        width: 500px;
+        width: 400px;
         position: absolute;
         bottom: 45%;
         justify-self: center;
-        left: 30%;
+        left: 32%;
     }
     .login-form{
         width: 100%;
@@ -245,18 +263,34 @@ p{
         cursor: pointer;
     }
     #loginBtn{
+       width: 300px;
        margin-right: 40%;
        margin-left:40%;
+       border-radius: 13px;
     }
     #googleBtn{
         position: relative;
-        bottom: 20px;
         margin-right: 90px;
         margin-left: 90px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap:24px;
+        background-color: white;
+        color :black;
+        border-radius: 5px;
+        border: 1px solid #715DAB;
+        width: auto;
+        color:rgba(5, 5, 5, 0.49);
+        padding-left:  8px;
+        padding-right: 8px;
+        font-weight: 600;
+        font-size: 24px;
+        bottom:25px;
     }
     
     #email{
-        width:60%;
+        width:50%;
         height:7%;
         background-color:#9399F5;
         border: none;
@@ -267,7 +301,7 @@ p{
         color: white;
     }
     #password{
-        width:60%;
+        width:50%;
         height:7%;
         background-color: #9399F5;
         border: none;
@@ -286,7 +320,6 @@ p{
         position: relative;
         left:15%;
         width:70%;
-        height:100%;
         display: flex;
         flex-wrap: wrap;
         font-size: 24px;
@@ -305,6 +338,7 @@ p{
     p{
         width: 100%;
         text-align: center;
+        margin-bottom:10px;
     }
     }
 /* mediaqueries para tablet horizontal termina  */

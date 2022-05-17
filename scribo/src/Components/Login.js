@@ -43,7 +43,7 @@ export function Login () {
             placeholder="Contraseña"
             onChange= {handleChange}/>
             <button type="login" id='loginBtn'>Iniciar Sesión</button>
-            <button type="button" id='googleBtn' onClick = {handleGoogleSignin}>Iniciar con <FcGoogle></FcGoogle> </button>
+            <button type="button" id='googleBtn' onClick = {handleGoogleSignin}><FcGoogle size= '1.5em'></FcGoogle> Acceder con Google</button>
             </form>
   )
 }
