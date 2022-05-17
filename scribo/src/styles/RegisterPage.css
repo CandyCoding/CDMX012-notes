@@ -76,6 +76,28 @@
     .bnt-registro{
         margin-right: 200px;
         margin-left: 200px;
+        width:25%;
+        height:10%;
+        background-color:#715DAB;
+        color: white;
+        font-size: 24px;
+        font-weight: bold;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+    .btn-volver{
+        margin-right: 200px;
+        margin-left: 200px;
+        width:25%;
+        height:10%;
+        background-color:#715DAB;
+        color: white;
+        font-size: 24px;
+        font-weight: bold;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
     }
     .link-volver{
         text-decoration: none;
@@ -91,9 +113,9 @@
         overflow-x: hidden;
     }
     .register-form{
-        width: 85%;
+        width: 89%;
         position: relative;
-        left:7.5%;
+        left:5.5%;
         height:300px;
         display: flex;
         flex-wrap: wrap;
@@ -115,6 +137,7 @@
     .bnt-registro{
         margin-right: 400px;
         margin-left: 400px;
+        
     }
     .btn-volver{
         margin-right: 100px;

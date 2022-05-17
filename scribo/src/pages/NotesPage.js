@@ -36,10 +36,11 @@ function NotesPage () {
               return (
                 <div className='note-container' key={note.id} style= {{ background: note.color }}>
                 <section className='title-container'>
-                <h4 className='title-note'>{note.title}</h4>
+                <h4 className='title-note'><Link className='note-text' to={`/editar/${note.id}`}>{note.title}</Link></h4>
                 </section>
                 <div className='textcontent-container'><Link className='note-text' to={`/editar/${note.id}`}>{note.postText}</Link></div>
-                <p className='date-note'>Última actualización el {note.dateTime}</p>
+                <p className='date-note'><Link className='note-text' to={`/editar/${note.id}`}>Última actualización el {note.dateTime}</Link>
+                </p>
                 </div>
               )
             })}

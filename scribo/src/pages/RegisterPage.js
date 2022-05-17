@@ -39,7 +39,7 @@ function RegisterPage () {
             id="password"
             placeholder="Crea tu contraseña"
             onChange= {handleChange}/>
-            <button type="submit" className='bnt-registro'>Registrarse</button>
+            <button type="submit" className='bnt-registro'id='btn-registro'>Registrarse</button>
             <button type="button"className='btn-volver'> <Link className= "link-volver" to="/CDMX012-notes">Volver</Link></button>
             </form>
           </div>

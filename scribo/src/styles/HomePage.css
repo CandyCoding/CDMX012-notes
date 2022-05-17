@@ -205,6 +205,7 @@ p{
     p{
         width: 100%;
         text-align: center;
+        margin: 10px;
     }
     }
 /* mediaqueries para tablet vertical termina  */
@@ -216,10 +217,11 @@ p{
     }
     
     .logo{
-        position :absolute;
+        width: 500px;
+        position: absolute;
         bottom: 45%;
         justify-self: center;
-        left: 25%;
+        left: 30%;
     }
     .login-form{
         width: 100%;
